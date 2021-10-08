@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#CC493751"
+    tools:context=".AccountFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:id="@+id/accountToolbar"
+            android:background="@color/secondary"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/accountProfileCardview"
+            android:backgroundTint="@color/pink_light"
+            android:layout_below="@+id/accountToolbar">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/accountProfileImage"
+                    android:background="@drawable/circular_shape"
+                    android:src="@drawable/ic_person"
+                    android:backgroundTint="@color/white"
+                    android:layout_margin="@dimen/medium_margin"
+                    android:layout_alignParentStart="true"
+                    />
+
+                <TextView
+                    android:id="@+id/accountUsernameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/medium_text_size"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-medium"
+                    android:layout_marginTop="@dimen/medium_margin"
+                    android:maxLines="2"
+                    android:text="@string/username"
+                    android:typeface="sans"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/accountProfileImage"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/accountViewProfileButton"
+                    android:layout_below="@+id/accountProfileImage"
+                    android:backgroundTint="@color/pink_light"
+                    android:text="@string/viewprofile"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/accountRequestButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:textColor="@color/white"
+            android:layout_below="@+id/accountProfileCardview"
+            android:backgroundTint="@color/primary"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:text="@string/requests"/>
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center"
+            android:textColor="@color/white"
+            android:layout_below="@+id/accountRequestButton"
+            android:backgroundTint="@color/primary"
+            android:text="@string/logout"/>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

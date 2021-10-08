@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <padding
+        android:right="@dimen/text_padding"
+        android:left="@dimen/text_padding"/>
+    <corners
+        android:radius="@dimen/round_radius"/>
+    <gradient
+        android:startColor="@color/primary"
+        android:centerColor="@color/black"
+        android:endColor="@color/primary"
+        android:gradientRadius="@dimen/cardview_compat_inset_shadow"
+        android:type="sweep"/>
+
+</shape>

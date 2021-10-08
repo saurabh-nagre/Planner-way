@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/addpersonImage"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/roundcorner"
+        android:layout_marginStart="@dimen/small_margin"
+        android:src="@drawable/ic_camera"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addpersonNameTV"
+        android:textSize="@dimen/medium_text_size"
+        android:layout_toEndOf="@+id/addpersonImage"
+        android:scrollbars="horizontal"
+        android:scrollbarStyle="insideInset"
+        android:padding="@dimen/text_padding"
+        android:textColor="@color/black"
+        android:layout_toStartOf="@+id/addpersonRequestButton"
+        android:layout_marginHorizontal="@dimen/small_margin"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_centerVertical="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/addpersonRequestButton"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:alpha="0.6"
+        android:textColor="@color/white"
+        android:text="@string/request"
+        android:backgroundTint="@color/purple_200"/>
+
+
+
+</RelativeLayout>

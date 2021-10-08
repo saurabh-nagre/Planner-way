@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/userProfile"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Profile_viewFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:id="@+id/profileToolbar"
+            android:background="@color/secondary"
+            app:titleTextColor="@color/white"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:id="@+id/profileImage"
+        android:src="@drawable/ic_account"
+        android:layout_margin="@dimen/small_margin"
+        android:layout_below="@id/profileToolbar"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/profileImageChangeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profileImage"
+        android:textSize="@dimen/small_text_size"
+        android:text="@string/clicktochangeprofileimage"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold|italic"
+        android:textColor="@color/pink_light"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/usernameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:hintEnabled="true"
+            android:layout_marginLeft="@dimen/large_margin"
+            android:layout_marginRight="@dimen/large_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_below="@+id/profileImageChangeTV"
+            app:hintAnimationEnabled="true"
+            app:errorEnabled="true"
+            android:layout_centerHorizontal="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileUsernameET"
+                android:textSize="@dimen/small_text_size"
+                android:textColor="@color/black"
+                android:background="@drawable/empty_roundcorner"
+                android:gravity="start|center"
+                android:hint="@string/username"
+                android:inputType="text"
+                android:typeface="sans"
+                android:padding="@dimen/text_padding"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/nameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            app:hintEnabled="true"
+            android:layout_marginLeft="@dimen/large_margin"
+            android:layout_marginRight="@dimen/large_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_below="@+id/usernameLayout"
+            app:hintAnimationEnabled="true"
+            app:errorEnabled="true"
+            android:layout_centerHorizontal="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileNameET"
+                android:textSize="@dimen/small_text_size"
+                android:textColor="@color/black"
+                android:background="@drawable/empty_roundcorner"
+                android:gravity="start|center"
+                android:hint="@string/name"
+                android:typeface="sans"
+                android:inputType="text"
+                android:padding="@dimen/text_padding"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/profileemailTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/large_margin"
+            android:layout_marginRight="@dimen/large_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_below="@+id/nameLayout"
+            android:textSize="@dimen/small_text_size"
+            android:textColor="@color/black"
+            android:background="@drawable/empty_roundcorner"
+            android:gravity="start|center"
+            android:typeface="sans"
+            android:padding="@dimen/text_padding"
+            android:layout_centerHorizontal="true"
+            app:drawableEndCompat="@drawable/ic_lock">
+
+        </TextView>
+
+
+       <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/doblayout"
+            android:layout_width="290dp"
+            android:layout_height="50dp"
+            app:hintEnabled="true"
+            android:layout_marginLeft="@dimen/large_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:layout_below="@+id/profileemailTV"
+            android:layout_alignParentStart="true"
+            app:hintAnimationEnabled="true"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="290dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/profileDobET"
+                android:textSize="@dimen/small_text_size"
+                android:textColor="@color/black"
+                android:background="@drawable/empty_roundcorner"
+                android:gravity="start|center"
+                android:inputType="date"
+                android:typeface="sans"
+                android:hint="@string/dob"
+                android:padding="@dimen/text_padding"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/datePicker"
+            android:src="@drawable/ic_date_picker"
+            android:background="@color/white"
+            android:layout_above="@+id/profilePasswordResetButton"
+            android:layout_below="@+id/profileemailTV"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/large_margin"
+            android:layout_marginTop="@dimen/small_margin"
+            android:layout_marginBottom="@dimen/small_margin"
+            android:contentDescription="@string/dob"
+            android:layout_toEndOf="@+id/doblayout"/>
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:id="@+id/resetTV"
+           android:layout_below="@+id/doblayout"
+           android:text="@string/resetpassword"
+           android:typeface="serif"
+           android:layout_marginLeft="@dimen/large_margin"
+           android:layout_marginRight="@dimen/large_margin"
+           android:layout_marginTop="@dimen/medium_margin"
+           android:layout_marginBottom="@dimen/medium_margin"
+           android:textSize="@dimen/small_text_size"/>
+
+       <Button
+           android:id="@+id/profilePasswordResetButton"
+           android:layout_width="wrap_content"
+           android:layout_height="30dp"
+           android:layout_below="@+id/doblayout"
+           android:text="@string/sendlink"
+           android:gravity="center"
+           android:textAlignment="center"
+           android:layout_marginTop="@dimen/medium_margin"
+           android:paddingStart="@dimen/text_padding"
+           android:paddingEnd="@dimen/text_padding"
+           android:background="@color/secondary"
+           android:layout_toEndOf="@+id/resetTV"
+           android:textColor="@color/white"/>
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/emailverifyTV"-->
+<!--            android:layout_below="@+id/resetTV"-->
+<!--            android:text="@string/verifyemail"-->
+<!--            android:typeface="serif"-->
+<!--            android:layout_marginLeft="@dimen/large_margin"-->
+<!--            android:layout_marginRight="@dimen/large_margin"-->
+<!--            android:layout_marginTop="@dimen/medium_margin"-->
+<!--            android:layout_marginBottom="@dimen/small_margin"-->
+<!--            android:textSize="@dimen/small_text_size"/>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/sendverificationlinkButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_below="@+id/profilePasswordResetButton"-->
+<!--            android:text="@string/sendemaillink"-->
+<!--            android:background="@color/secondary"-->
+<!--            android:paddingStart="@dimen/text_padding"-->
+<!--            android:paddingEnd="@dimen/text_padding"-->
+<!--            android:layout_marginTop="@dimen/medium_margin"-->
+<!--            android:layout_toEndOf="@+id/emailverifyTV"-->
+<!--            android:textColor="@color/white"/>-->
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profileSaveButton"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/large_margin"
+            android:text="@string/saveprofile"
+            android:textStyle="bold"
+            android:elevation="@dimen/text_padding"
+            android:layout_below="@+id/profilePasswordResetButton"
+            android:background="@drawable/roundcorner"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_chat">
+
+    <fragment
+        android:id="@+id/nav_chat"
+        android:name="com.master.plannerway.ChatFragment"
+        android:label="@string/chat"
+        tools:layout="@layout/fragment_chat" >
+        <action
+            android:id="@+id/action_nav_chat_to_nav_createNewGroup"
+            app:destination="@id/nav_createNewGroup"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_chat_to_nav_account"
+            app:destination="@id/nav_account" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_account"
+        android:name="com.master.plannerway.AccountFragment"
+        android:label="@string/account"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_nav_account_to_profile_viewFragment"
+            app:destination="@id/profile_viewFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_schedule"
+        android:name="com.master.plannerway.ScheduleFragment"
+        android:label="@string/schedule"
+        tools:layout="@layout/fragment_schedule" />
+    <fragment
+        android:id="@+id/nav_createNewGroup"
+        android:name="com.master.plannerway.CreateNewGroup"
+        android:label="Create New Group"
+        tools:layout="@layout/fragment_create_new_group" >
+        <action
+            android:id="@+id/action_nav_createNewGroup_to_nav_chat"
+            app:destination="@id/nav_chat"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/profile_viewFragment"
+        android:name="com.master.plannerway.Profile_viewFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile_view" >
+        <action
+            android:id="@+id/action_profile_viewFragment_to_nav_account"
+            app:destination="@id/nav_account"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+</navigation>

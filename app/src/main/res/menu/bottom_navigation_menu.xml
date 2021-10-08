@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title=""
+        android:id="@+id/nav_schedule"
+        android:icon="@mipmap/ic_schedule" />
+    <item
+        android:title=""
+        android:id="@+id/nav_chat"
+        android:icon="@mipmap/ic_chat_blue_circle" />
+
+    <item
+        android:title=""
+        android:id="@+id/nav_account"
+        android:icon="@drawable/ic_person"/>
+
+</menu>

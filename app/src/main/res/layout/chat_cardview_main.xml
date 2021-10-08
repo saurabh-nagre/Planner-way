@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/accountImage"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/ganesha"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="@dimen/small_margin"
+            android:contentDescription="@string/account" />
+
+        <TextView
+            android:id="@+id/accountNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/large_text_size"
+            android:layout_toEndOf="@+id/accountImage"
+            android:text="Alaster cook the great"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/small_margin"
+            android:textSize="@dimen/medium_text_size"
+            android:textColor="@color/black"
+            android:layout_toStartOf="@+id/accountMsgCountTV"
+            android:textAlignment="viewStart"/>
+
+        <TextView
+            android:id="@+id/accountLastMsgTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/small_text_size"
+            android:layout_below="@+id/accountNameTV"
+            android:layout_toEndOf="@+id/accountImage"
+            android:text="you: hi"
+            android:textStyle="italic"
+            android:fontFamily="sans-serif-condensed-light"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/secondary"
+            android:layout_marginStart="@dimen/small_margin"
+            android:layout_alignParentBottom="true"/>
+
+
+        <TextView
+            android:id="@+id/accountMsgCountTV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/circular_shape"
+            android:layout_alignParentEnd="true"
+            android:backgroundTint="@color/purple_200"
+            android:text="100"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            android:layout_margin="@dimen/small_margin"
+            android:gravity="center"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/accountLastMsgTimeTV"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/accountMsgCountTV"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/secondary"
+            android:text="9:45pm"
+            android:textSize="@dimen/small_text_size"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

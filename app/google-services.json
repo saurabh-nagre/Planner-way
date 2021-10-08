@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "13565275701",
+    "project_id": "planner-way-8b4fd",
+    "storage_bucket": "planner-way-8b4fd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13565275701:android:943c6c840d34e26ec54b7c",
+        "android_client_info": {
+          "package_name": "com.master.plannerway"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13565275701-8rbn6ecetgi6fevsb7mm39bqqjkjf0nv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.master.plannerway",
+            "certificate_hash": "481169253dd04131d8223786b528ca0d2b60693f"
+          }
+        },
+        {
+          "client_id": "13565275701-90l48dbb91kmt8gfe7h5kk4rljuue5j0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2837RG0O_YFI0q7O4tN9z4veqn1p7q9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "13565275701-90l48dbb91kmt8gfe7h5kk4rljuue5j0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
